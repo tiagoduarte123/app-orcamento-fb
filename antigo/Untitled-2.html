@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+
+<div id="c_b">
+
+<input type="checkbox" value="one_name" checked="checked" />
+
+<input type="checkbox" value="one_name1" />
+
+<input type="checkbox" value="one_name2" />
+
+</div>
+
+<textarea id="t"></textarea>
+<input name="Submit" type="submit" value="Submit" />
+
+
+</body>
+</html>
+
+<script>
+function updateTextArea(){
+var allVals = [];
+
+$('#c_b:checked').each(function() {
+	
+allVals.push($(this).val());
+
+});
+
+$('#t').val(allVals) 
+
+}
+
+$(function() {
+	$('#c_b input').click(updateTextArea); 
+	updateTextArea();
+});
+
+</script>

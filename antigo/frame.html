@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>HTML Teste</title>
+<script type="text/javascript">
+function mostrar() {
+    var cod = document.getElementById("codigo").value;
+    var iframe = area_de_codigo;
+    var doc = iframe.document;
+    if(iframe.contentDocument)
+        doc = iframe.contentDocument;
+    else if(iframe.contentWindow)
+        doc = iframe.contentWindow.document;
+    doc.open();
+    doc.writeln(cod);
+    doc.close();
+}
+</script>
+</head>
+
+<body>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="373">
+            <p><textarea rows="25" name="codigo" id="codigo" cols="44"></textarea><br>
+            <input type="submit" value="Testar" name="" onClick="mostrar();"></p>
+        </td>
+        <td align="left" valign="top">
+        <iframe name="area_de_codigo" width="395" height="416" src="">
+        O explorador não suporta iframes..
+        </iframe></td>
+    </tr>
+</table>
+
+</body>
+</html>

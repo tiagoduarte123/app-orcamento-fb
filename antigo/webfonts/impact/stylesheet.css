@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'impact';
+	src: url('impact-webfont.eot');
+	src: url('impact-webfont.eot?#iefix') format('embedded-opentype'),
+		url('impact-webfont.woff') format('woff'),
+		url('impact-webfont.ttf') format('truetype'),
+		url('impact-webfont.svg') format('svg');
+}

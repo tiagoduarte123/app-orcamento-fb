@@ -1,0 +1,476 @@
+@import url('reset.css');
+
+/*
+ * FONT-FACE
+ */
+@font-face {
+    font-family: 'Springtime';
+    src: url('../fonts/springtime-webfont.eot');
+    src: url('../fonts/springtime-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/springtime-webfont.woff') format('woff'),
+         url('../fonts/springtime-webfont.ttf') format('truetype'),
+         url('../fonts/springtime-webfont.svg#springtimeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaBk';
+    src: url('../fonts/ftrabk-webfont.eot');
+    src: url('../fonts/ftrabk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ftrabk-webfont.woff') format('woff'),
+         url('../fonts/ftrabk-webfont.ttf') format('truetype'),
+         url('../fonts/ftrabk-webfont.svg#futura_bkbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+ * GERAL
+ */
+
+html,
+body{
+	height:100%;
+}
+
+body{
+	font-family: 'FuturaBk';
+}
+
+h2{
+	font-family:'Springtime';
+	font-size:34pt;
+	color:#29ABE2;
+	display:inline-block;
+	padding:0 30px 30px 0;
+	margin:90px 0 60px;
+	border-bottom:1px solid white;
+}
+
+h3{
+	font-family:'Springtime';
+	font-size:18pt;
+	color:#c1c1c1;
+	margin-bottom:20px;
+}
+
+h3 span{
+	font-size:12px;
+	color:#29ABE2;
+	vertical-align:middle;
+}
+
+h4{
+	color: #29ABE2;
+	font-size: 20pt;
+	font-family: 'Springtime';
+	font-weight: bold;
+}
+
+p{
+	font-size:12pt;
+	line-height:1.4;
+	color:#c1c1c1;
+	margin-bottom:40px;
+}
+
+
+p span{
+	font-size: 20pt;
+}
+
+.blue{
+	color:#29ABE2;
+}
+
+
+/*
+ * ESTRUTURA
+ */
+
+ /****** MENU ******/
+nav{
+	position:fixed;
+	right: 20px;
+	top:45%;
+	z-index: 100;
+}
+
+nav a{
+	display:inline-block;
+	position:relative;
+	height:33px;
+	width:33px;
+}
+
+
+nav a:hover:after{
+   background:#29ABE2;
+   background:rgba(0,0,0,.8);
+   border-radius:5px;
+   bottom:18px;
+   color:#29ABE2;
+   content:attr(title);
+   display:inline;
+   left:-250%;
+   padding:5px 15px;
+   position:absolute;
+   white-space:nowrap;
+   z-index:98;
+   font-size: 13px;
+   
+   opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+ }
+
+a[href="#inicio"]{ 
+	background:url(../img/icon-inicio.png) no-repeat center center;
+}
+
+a[href="#servicos"]{ 
+	background:url(../img/icon-servicos.png) no-repeat center center;
+}
+
+a[href="#sobre"]{ 
+	background:url(../img/icon-sobre.png) no-repeat center center;
+}
+
+a[href="#contactos"]{ 
+	background:url(../img/icon-contactos.png) no-repeat center center;
+}
+
+a[href="#inicio"]:hover"]{ 
+	background:url(../img/icon-inicio-hover.png) no-repeat center center;
+}
+
+a[href="#servicos"]:hover{ 
+	background:url(../img/icon-servicos-hover.png) no-repeat center center;
+}
+
+a[href="#sobre"]:hover{ 
+	background:url(../img/icon-sobre-hover.png) no-repeat center center;
+}
+
+a[href="#contactos"]:hover{ 
+	background:url(../img/icon-contactos-hover.png) no-repeat center center;
+}
+
+ /****** ESTRUTURA - HEADER + CONTEÚDO + FOOTER ******/
+header{
+	width:100%;
+	border-bottom:6px solid #29ABE2;
+}
+
+.header_content,
+.content,
+.footer_content{
+	width:960px;
+	margin:0 auto;
+}
+
+.header_content img{
+	padding:15px 0;
+}
+
+.container{
+	background:url(../img/bg_content.jpg) no-repeat center center;
+}
+
+ /****** ASIDE - TEXTO CONTEÚDO ******/
+aside{
+	width:33.3333%;
+	float:left;
+	display:inline-block;
+}
+
+ /****** SECTION - DESENHO ******/
+section{
+	width:66.6666%;
+	display:inline-block;
+	margin-top:75px;
+}
+
+section img{
+	margin-left:75px
+}
+
+ /****** FOOTER ******/
+footer{
+	background:url(../img/bg_footer.jpg) no-repeat top center;
+	padding-bottom:50px;
+}
+
+footer .footer_content{
+	overflow:hidden;
+}
+
+footer .footer_content > img{
+	margin-left:100px;
+}
+
+footer section{
+	float:left;
+	display:inline-block;
+	width:50%;
+	margin:70px 0 0 0;
+}
+
+ /* FOOTER - FORMULÁRIO */
+footer section form{
+	margin-left:2px;
+}
+
+footer section label{
+	color:#4D4D4D;
+	font-size: 17pt;
+	text-transform: uppercase;
+	display:block;
+	margin-bottom:10px;
+}
+
+footer section input.form[type="text"],
+footer section input.form[type="email"],
+footer section textarea{
+	border-style: hidden;
+	height: 30px;
+	width: 400px;
+	margin-bottom:40px;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+	color:#888;
+}
+
+footer section textarea{
+	resize:vertical;
+}
+
+footer section input.form[type="text"]:hover,
+footer section input.form[type="email"]:hover,
+footer section textarea:hover,
+footer section input.form[type="text"]:focus,
+footer section input.form[type="email"]:focus,
+footer section textarea:focus{
+	border:1px solid ##29ABE2;
+	box-shadow:0 0 5px #29ABE2;
+	-webkit-box-shadow:0 0 5px #29ABE2;
+	-moz-box-shadow:0 0 5px #29ABE2;
+}
+
+footer section textarea{
+	height: 120px;
+	margin-bottom:20px;
+}
+
+footer section .required{
+	background:#29ABE2;
+	color:#fff !important; 
+}
+
+footer section input.form[type="submit"]{
+	background: url(../img/enviar.png) no-repeat;
+	border-style: hidden;
+	width: 80px;
+	height: 31px;
+	float:right;
+	margin: 10px 70px 0 0;
+	cursor:pointer;
+}
+
+footer section input.form[type="submit"]:hover{
+	background-position:0 -31px;
+}
+
+ /* FOOTER - CONTACTOS */
+footer section h4{
+	margin-left:10%;
+}
+
+footer section ul{
+	margin: 20px 0 0 10%;
+}
+
+footer section ul li,
+footer section ul li a{
+	line-height:1.4;
+	color:#808080;
+	font-size: 14pt;
+}
+
+footer section ul li a{
+	text-decoration:none;
+}
+
+footer section ul li a:hover{
+	color:#29ABE2;
+}
+
+footer section ul li:before{
+	margin-right:10px;
+}
+
+footer section ul .email:before{
+	content: url(../img/email.png) no-repeat center center;
+}
+
+footer section ul .phone:before{
+	content: url(../img/phone.png) no-repeat center center;
+}
+
+footer section ul .linkedin:before{
+	content: url(../img/linkedin.svg) no-repeat center center;
+}
+
+footer section ul .pdf:before{
+	content: url(../img/pdf.svg) no-repeat center center;
+}
+
+footer section ul li.newsletter:before{
+	content: url(../img/email.png) no-repeat center center;
+}
+
+footer section ul .socials{
+	background: url(../img/socials.svg);
+	height:30px;
+	width:30px;
+	display:inline-block;
+	margin-right:5px;
+	margin-top:-15px;
+
+	-webkit-transition: margin 0.25s linear;
+    -moz-transition: margin 0.25s linear;
+    -o-transition: margin 0.25s linear;
+    -ms-transition: margin 0.25s linear;
+    transition: margin 0.25s linear;
+}
+
+footer section ul .elementHovered,
+footer section ul .elementFocused{
+	margin-top:20px;
+}
+
+footer section ul .socials_li{
+	background-position:0 0;
+}
+
+footer section ul .socials_li:hover{
+	background-position:0 -30px;
+}
+
+footer section ul .socials_fb{
+	background-position:-30px 0;
+}
+
+footer section ul .socials_fb:hover{
+	background-position:-30px -30px;
+}
+
+footer section ul .socials_li a,
+footer section ul .socials_fb a{
+	width:30px;
+	height:30px;
+	display:block;
+}
+
+ /* FOOTER - FORMULÁRIO NEWSLETTER */
+ footer section ul li.newsletter:before{
+	content: url(../img/newsletter.svg) no-repeat center center;
+}
+
+footer section form.newsletter{
+	display: inline-block;
+	vertical-align: top;
+	margin-left:-15px;
+	width:340px;
+}
+
+footer section input.newsletter,
+footer section input.newsletter[type="submit"]{
+	border-style: hidden;
+	background-color:transparent;
+	height: 30px;
+	width: 268px;
+	padding: 10px;
+	color:#808080;
+	font-size:14pt;
+	font-family:'FuturaBk';
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+	
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+footer section input.newsletter[type="email"]{
+	opacity:0;
+}
+
+footer section form.newsletter:hover input.newsletter[type="text"],
+footer section form.newsletter:hover input.newsletter[type="email"],
+footer section input.newsletter:focus,
+footer section input.newsletter:focus ~ input.newsletter[type="email"],
+footer section input.newsletter:focus ~ input.newsletter[type="text"],
+footer section .active{
+	background-color:#fff !important;
+	margin-left:10px;
+	opacity:1;
+}
+
+footer section form.newsletter:hover input.newsletter[type="submit"],
+footer section input.newsletter:focus ~ input.newsletter[type="submit"]{
+	opacity:1;
+}
+
+footer section input.newsletter::-webkit-input-placeholder{
+    color:#808080;
+}
+
+footer section input.newsletter:-moz-placeholder{ 
+    color:#808080;
+}
+
+footer section input.newsletter::-moz-placeholder{
+    color:#808080;
+}
+
+footer section input.newsletter:-ms-input-placeholder{
+    color:#808080;
+}
+
+footer section input.newsletter[type="submit"]{
+	opacity:0;
+	width: auto;
+	background:#29ABE2 !important;
+	color:#fff;
+	font-size:12px;
+	padding:0 10px;
+	vertical-align: top;
+	cursor:pointer;
+}
+
+
+
+ /***** ZONA FUNDO *****/
+.bottom{
+	width:100%;
+	background-color:#000;
+}
+
+.bottom img{
+	margin:0 auto;
+	padding:30px 0 10px;
+}
+
+.bottom p{
+	color:#fff;
+	font-size:12px;
+	padding:20px 30px;
+}

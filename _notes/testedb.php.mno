@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_area" value="name:idservico;datatype:int,name:nome_servico;datatype:string,name:idarea;datatype:int" />
+</info>

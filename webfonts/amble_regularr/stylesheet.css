@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'amble regularr';
+	src: url('amble-regular.eot');
+	src: url('amble-regular.eot?#iefix') format('embedded-opentype'),
+		url('amble-regular.woff') format('woff'),
+		url('amble-regular.ttf') format('truetype'),
+		url('amble-regular.svg') format('svg');
+}

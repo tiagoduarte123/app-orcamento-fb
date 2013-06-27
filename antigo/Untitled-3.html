@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+
+<input type="checkbox" name="email_alerts" id="chk_email_alerts" value="ON" checked><label for='chk_email_alerts'>Email me matching jobs everyday</label>
+ 
+<input type="checkbox" name="recruiter_contact" id="chk_recruiter_contact" value="ON"><label for='chk_recruiter_contact'>Enable Recruiters to directly contact me</label>
+
+
+
+<script>
+function testCheckbox(oCheckbox)
+{
+    var checkbox_val = oCheckbox.value;
+    if (oCheckbox.checked == true)
+    {
+        alert("Checkbox with name = " + oCheckbox.name + " and value =" +
+                checkbox_val + " is checked");
+    }
+    else
+    {
+        alert("Checkbox with name = " + oCheckbox.name + " and value =" +
+              checkbox_val + " is not checked");
+    }
+}
+
+
+</script>
+
+</body>
+</html>

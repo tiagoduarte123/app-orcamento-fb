@@ -1,0 +1,62 @@
+<HTML>
+   <HEAD>
+      <TITLE>Multiple-Select Check Boxes</TITLE>
+      <SCRIPT LANGUAGE="JavaScript">
+         function getSelected(opt) {
+            var selected = new Array();
+            var index = 0;
+            for (var intLoop = 0; intLoop < opt.length; intLoop++) {
+               if ((opt[intLoop].selected) ||
+                   (opt[intLoop].checked)) {
+                  index = selected.length;
+                  selected[index] = new Object;
+                  selected[index].value = opt[intLoop].value;
+                  selected[index].index = intLoop;
+               }
+            }
+            return selected;
+         }
+
+         function outputSelected(opt) {
+			 var conteudo = '';
+            var sel = getSelected(opt);
+			
+            var strSel = "";
+            for (var item in sel) {      
+			strSel = strSel + sel[item].value + "<br>";
+        document.getElementById("conteudo").innerHTML=strSel;}	       
+			  // $('#t').val(strSel);
+        //alert("Selected Items:\n" + strSel);
+		//conteudo = conteudo + "asdsadasdsa" + strSel;
+		
+		
+		 
+         }
+		 
+		
+		
+      </SCRIPT>
+       
+   </HEAD>
+   <BODY> 
+   
+      <FORM NAME="ColorSelector">
+         <INPUT TYPE=CHECKBOX NAME="color" VALUE="Red">Red
+         <INPUT TYPE=CHECKBOX NAME="color" VALUE="Navy" CHECKED>Navy
+         <INPUT TYPE=CHECKBOX NAME="color" VALUE="Black">Black
+         <INPUT TYPE=CHECKBOX NAME="color" VALUE="White" CHECKED>White
+         <INPUT TYPE=BUTTON VALUE="Selected Check Box Items" 
+            ONCLICK="outputSelected(this.form.color);">
+         <P>
+         <SELECT NAME="multistore" SIZE=3 MULTIPLE>
+            <OPTION VALUE="Computer" SELECTED>Computer</OPTION>
+            <OPTION VALUE="Bookstore">Book Store</OPTION>
+            <OPTION VALUE="MailOrder" SELECTED>Mail Order</OPTION>
+         </SELECT>
+         <INPUT TYPE=BUTTON VALUE="Selected List Items" 
+            ONCLICK="outputSelected(this.form.multistore.options)">
+            <textarea id="t"></textarea>
+      </FORM>
+      <div id="conteudo"></div>
+   </BODY>
+</HTML>
