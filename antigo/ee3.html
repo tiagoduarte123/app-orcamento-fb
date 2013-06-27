@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+    <head>
+    <script type="text/javascript" src="js/jquery.1.4.4.min.js"></script>
+        <script>
+ window.addEventListener( 'load', function() {
+
+    var removeAllCheckedItems = function() {
+        
+        var disciplinasEl = document.querySelector( '#disciplinas' ),
+            checkedItems  = disciplinasEl.querySelectorAll( 'input:checked' );
+        
+        for( var i = 0, l = checkedItems.length; i < l; i++ ) {
+            disciplinasEl.removeChild( document.getElementById( checkedItems[i].value ) );
+        }
+    
+    }
+    
+    document.querySelector( '#remove-items' ).addEventListener( 'click', removeAllCheckedItems, false );
+
+}, false );
+
+        </script>
+    </head>
+    <body>
+       <div id="disciplinas">
+        <div id="AED"><input type="checkbox" name="item" value="AED" /> Algoritmos e Estruturas de Dados </div>
+        <div id="AS"><input type="checkbox" name="item" value="AS" /> Auditoria de Sistemas</div>
+        <div id="II"><input type="checkbox" name="item" value="II" /> Introdução a Informática</div>
+        <div id="DW"><input type="checkbox" name="item" value="DW" /> Desenvolvimento para Web</div>
+        <div id="SO"><input type="checkbox" name="item" value="SO" /> Sistemas Operacionais</div>
+        <div id="PW"><input type="checkbox" name="item" value="PW" /> Programação para Web</div>
+        <div id="BD"><input type="checkbox" name="item" value="BD" onClick="$(this).parent().remove(); " /> Banco de Dados</div>
+    </div>
+<button id="remove-items">Apagar matérias</button>
+    </body>
+</html>

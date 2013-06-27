@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'asansreg';
+	src: url('asansreg-webfont.eot');
+	src: url('asansreg-webfont.eot?#iefix') format('embedded-opentype'),
+		url('asansreg-webfont.woff') format('woff'),
+		url('asansreg-webfont.ttf') format('truetype'),
+		url('asansreg-webfont.svg') format('svg');
+}

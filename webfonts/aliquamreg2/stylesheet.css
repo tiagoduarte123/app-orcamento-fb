@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'aliquamreg2';
+	src: url('aliquamreg-webfont.eot');
+	src: url('aliquamreg-webfont.eot?#iefix') format('embedded-opentype'),
+		url('aliquamreg-webfont.woff') format('woff'),
+		url('aliquamreg-webfont.ttf') format('truetype'),
+		url('aliquamreg-webfont.svg') format('svg');
+}
